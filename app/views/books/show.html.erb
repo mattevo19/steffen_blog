@@ -4,4 +4,7 @@
   <p>Summary: <%= @book.summary %></p>
   <p>My Notes: <%= @book.notes %></p>
   <p>Rating: <%= @book.rating %>/10</p>
+  <% if (@book.photo.attached?) %>
+    <%= cl_image_tag @book.photo.key, height: 300, width: 400, crop: :fill %>
+  <% end %>
 </div>
