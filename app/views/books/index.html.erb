@@ -1,0 +1,15 @@
+<div class="container">
+  <ul>
+    <% @books.each do |book| %>
+      <li>
+        <%= link_to book.title,book_path(book) %>
+        <p>Summary: <%= book.summary %></p>
+        <p>Rating: <%= book.rating %>/10</p>
+        <% if user_signed_in? %>
+          <%= link_to  "edit", edit_book_path(book), class: "btn btn-secondary" %>
+          <%= link_to "Delete", book_path(book), method: :delete, data: { confirm: "Are you sure?"}, class: "btn btn-danger" %>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+</div>

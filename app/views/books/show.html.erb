@@ -1,0 +1,7 @@
+<div class="container">
+  <h1><%= @book.title %> by <%= @book.author %></h1>
+  <p>Date added: <%= @book.created_at.strftime("%d/%m/%Y") %></p>
+  <p>Summary: <%= @book.summary %></p>
+  <p>My Notes: <%= @book.notes %></p>
+  <p>Rating: <%= @book.rating %>/10</p>
+</div>
