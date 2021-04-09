@@ -4,8 +4,8 @@
       <li>
         <%= link_to book.title,book_path(book) %>
         <%= cl_image_tag book.photo.key, height: 100, width: 100, crop: :fill  %>
-        <p>Summary: <%= book.summary %></p>
-        <p>Notes: <%= book.notes %></p>
+        <p>Summary: <%= book.rich_summary %></p>
+        <p>Notes: <%= book.rich_notes %></p>
         <p>Rating: <%= book.rating %>/10</p>
         <% if user_signed_in? %>
           <%= link_to  "edit", edit_book_path(book), class: "btn btn-secondary" %>
