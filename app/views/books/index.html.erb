@@ -3,7 +3,8 @@
     <% @books.each do |book| %>
       <li>
         <%= link_to book.title,book_path(book) %>
-        <p>Summary: <%= book.summary %></p>
+        <p>Summary: <%= book.rich_summary %></p>
+        <p>Notes: <%= book.rich_notes %></p>
         <p>Rating: <%= book.rating %>/10</p>
         <% if user_signed_in? %>
           <%= link_to  "edit", edit_book_path(book), class: "btn btn-secondary" %>
