@@ -3,10 +3,11 @@
   <%= simple_form_for @book do |f| %>
     <%= f.input :title %>
     <%= f.input :author %>
-    <%= f.input :summary %>
+    <%= f.rich_text_area :rich_summary %>
     <%= f.input :notes %>
     <%= f.input :rating, error: 'Has to be between 0 - 10' %>
     <%= f.input :photo, as: :file %>
     <%= f.button :submit, class: "btn btn-secondary" %>
   <% end %>
 </div>
+
