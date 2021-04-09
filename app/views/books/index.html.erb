@@ -3,6 +3,7 @@
     <% @books.each do |book| %>
       <li>
         <%= link_to book.title,book_path(book) %>
+        <%= cl_image_tag book.photo.key, height: 100, width: 100, crop: :fill  %>
         <p>Summary: <%= book.rich_summary %></p>
         <p>Notes: <%= book.rich_notes %></p>
         <p>Rating: <%= book.rating %>/10</p>
