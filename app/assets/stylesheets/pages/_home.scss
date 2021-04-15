@@ -1,1 +1,25 @@
-// Specific CSS for your home-page
+.card {
+  background-color: white;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  .book_content {
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+  }
+  .rating_position {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  text-decoration: none;
+  color: black;
+}
