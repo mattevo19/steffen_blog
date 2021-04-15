@@ -1,17 +1,24 @@
 <div class="container">
-  <ul>
     <% @books.each do |book| %>
-      <li class="card">
-        <%= link_to book.title,book_path(book) %>
-        <%= cl_image_tag book.photo.key, height: 100, width: 100, crop: :fill  %>
-        <p>Summary: <%= book.rich_summary %></p>
-        <p>Notes: <%= book.rich_notes %></p>
-        <p>Rating: <%= book.rating %>/10</p>
-        <% if user_signed_in? %>
-          <%= link_to  "edit", edit_book_path(book), class: "btn btn-secondary", style: "width: 100px" %>
-          <%= link_to "Delete", book_path(book), method: :delete, data: { confirm: "Are you sure?"}, class: "btn btn-danger", style: "width: 100px" %>
-        <% end %>
-      </li>
+      <%= link_to book_path(book), :action => 'go' do %>
+        <div class="card">
+          <div class="book_picture">
+            <%= cl_image_tag book.photo.key %>
+          </div>
+          <div class="book_content">
+            <h2><%= book.title %> by <%= book.author %></h2>
+            <%= book.rich_summary %>
+            <div class="rating_position">
+              <p>Rating: <%= book.rating %>/10</p>
+            </div>
+          </div>
+        </div>
+      <% end %>
+      <% if user_signed_in? %>
+        <%= link_to  "edit", edit_book_path(book), class: "btn btn-secondary", style: "width: 100px" %>
+        <%= link_to "Delete", book_path(book), method: :delete, data: { confirm: "Are you sure?"}, class: "btn btn-danger", style: "width: 100px" %>
+      <% end %>
     <% end %>
-  </ul>
 </div>
+
+
