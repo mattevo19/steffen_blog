@@ -1,0 +1,25 @@
+.card {
+  background-color: white;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  font-family: 'Cormorant Garamond', serif;
+  .book_picture {
+    img {
+      width: 464px;
+    }
+  }
+  .book_content {
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    padding: 48px;
+    h2, h3 {
+      font-family: 'Cormorant Garamond', serif;
+    }
+  }
+  .rating_position {
+    display: flex;
+    justify-content: flex-end;
+  }
+}

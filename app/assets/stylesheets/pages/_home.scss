@@ -1,20 +1,3 @@
-.card {
-  background-color: white;
-  margin-top: 20px;
-  display: flex;
-  flex-direction: row;
-  .book_content {
-    justify-content: space-between;
-    display: flex;
-    flex-direction: column;
-    padding: 16px;
-  }
-  .rating_position {
-    display: flex;
-    justify-content: flex-end;
-  }
-}
-
 a {
   text-decoration: none;
   color: black;
@@ -22,4 +5,42 @@ a {
 a:hover {
   text-decoration: none;
   color: black;
+}
+
+@media screen and (max-width: 1200px) {
+  .card .book_picture img {
+    width: 464px;
+  }
+  .container {
+      max-width: 1030px;
+  }
+  .navbar .navbar-brand {
+    font-size: 6.5rem;
+    font-family: 'Bebas Neue', cursive;
+  }
+}
+
+
+
+
+@media screen and (max-width: 900px) {
+  .card .book_picture img {
+    width: 228px;
+  }
+  .navbar .navbar-brand {
+    font-size: 4.5rem;
+    font-family: 'Bebas Neue', cursive;
+  }
+}
+
+
+
+@media screen and (max-width: 630px) {
+  .card .book_picture img {
+    width: 0px;
+  }
+  .navbar .navbar-brand {
+    font-size: 2.5rem;
+    font-family: 'Bebas Neue', cursive;
+  }
 }
