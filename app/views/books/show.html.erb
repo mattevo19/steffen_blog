@@ -1,10 +1,28 @@
-<div class="container">
-  <h1><%= @book.title %> by <%= @book.author %></h1>
-  <p>Date added: <%= @book.created_at.strftime("%d/%m/%Y") %></p>
-  <p>Summary: <%= @book.rich_summary %></p>
-  <p>My Notes: <%= @book.rich_notes %></p>
-  <p>Rating: <%= @book.rating %>/10</p>
-  <% if (@book.photo.attached?) %>
-    <%= cl_image_tag @book.photo.key, height: 100, width: 100, crop: :fill %>
-  <% end %>
+<div class="container show_card">
+  <div class="book_photo">
+    <% if (@book.photo.attached?) %>
+      <%= cl_image_tag @book.photo.key, height: 100, width: 100, crop: :fill %>
+    <% end %>
+  </div>
+  <div class="header">
+    <div class="show_title">
+      <h2><%= @book.title %> by <%= @book.author %></h2>
+      <p>Date added: <%= @book.created_at.strftime("%d/%m/%Y") %></p>
+    </div>
+    <div class="rating_position">
+      <h3>Rating: <%= @book.rating %>/10</h3>
+    </div>
+  </div>
+  <div class="content">
+    <h3>Summary:</h3>
+    <div class="padding_left">
+      <%= @book.rich_summary %>
+    </div>
+  </div>
+  <div class="content">
+    <h3>My notes:</h3>
+    <div class="padding_left">
+      <%= @book.rich_notes %>
+    </div>
+  </div>
 </div>

@@ -7,6 +7,7 @@ a:hover {
   color: black;
 }
 
+
 @media screen and (max-width: 1200px) {
   .card .book_picture img {
     width: 464px;
@@ -20,9 +21,6 @@ a:hover {
   }
 }
 
-
-
-
 @media screen and (max-width: 900px) {
   .card .book_picture img {
     width: 228px;
@@ -33,12 +31,21 @@ a:hover {
   }
 }
 
-
-
 @media screen and (max-width: 630px) {
   .card .book_picture img {
     width: 0px;
   }
+
+  .book_title {
+    padding-bottom: 16px;
+  }
+  .rating_position {
+    margin-top: 16px;
+    p{
+      margin-bottom: 0px;
+    }
+  }
+
   .navbar .navbar-brand {
     font-size: 2.5rem;
     font-family: 'Bebas Neue', cursive;

@@ -1,0 +1,25 @@
+.show_card {
+  padding: 48px;
+  background-color: white;
+  font-family: 'Cormorant Garamond', serif;
+  h2, h3 {
+    font-family: 'Cormorant Garamond', serif;
+  }
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.padding_left {
+  padding-left: 2rem;
+}
+
+.content {
+  align-items: baseline;
+  display: flex;
+  margin-bottom: 32px;
+  h3 {
+    flex: none;
+  }
+}
