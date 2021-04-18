@@ -9,6 +9,7 @@
 .header {
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
 }
 
 .padding_left {
@@ -21,5 +22,6 @@
   margin-bottom: 32px;
   h3 {
     flex: none;
+    font-size: 20px;
   }
 }

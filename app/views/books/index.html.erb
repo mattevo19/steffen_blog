@@ -1,13 +1,18 @@
 <div class="container">
-    <% @books.each do |book| %>
-      <%= link_to book_path(book), :action => 'go' do %>
+  <% @books.each do |book| %>
+    <%= link_to book_path(book), :action => 'go' do %>
+      <div class="margin_bottom">
         <div class="card">
           <div class="book_picture">
-            <%= cl_image_tag book.photo.key %>
+            <% if (book.photo.attached?) %>
+              <%= cl_image_tag book.photo.key %>
+            <% else %>
+              <img src="https://hertrack.com/wp-content/uploads/2018/10/no-image.jpg" alt="no image">
+            <% end %>
           </div>
           <div class="book_content">
             <div class="book_title">
-              <h2 style="margin-bottom: 0;font-weight: bold;"><%= book.title %></h2>
+              <h2 style="margin-bottom: 0;font-weight: bold; font-variant: small-caps;"><%= book.title %></h2>
               <h3 style="font-size: 1rem; font-style: italic;"> by <%= book.author %></h3>
             </div>
             <%= book.rich_summary %>
@@ -16,12 +21,15 @@
             </div>
           </div>
         </div>
-      <% end %>
-      <% if user_signed_in? %>
-        <%= link_to  "edit", edit_book_path(book), class: "btn btn-secondary", style: "width: 100px" %>
-        <%= link_to "Delete", book_path(book), method: :delete, data: { confirm: "Are you sure?"}, class: "btn btn-danger", style: "width: 100px" %>
-      <% end %>
+        <div>
+          <% if user_signed_in? %>
+            <%= link_to  "edit", edit_book_path(book), class: "btn btn-secondary", style: "width: 100px" %>
+            <%= link_to "Delete", book_path(book), method: :delete, data: { confirm: "Are you sure?"}, class: "btn btn-danger", style: "width: 100px" %>
+          <% end %>
+        </div>
+      </div>
     <% end %>
+  <% end %>
 </div>
 
 
