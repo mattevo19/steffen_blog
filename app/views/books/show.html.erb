@@ -8,8 +8,8 @@
     <div class="show_title">
       <h2 style="font-variant: small-caps;"><%= @book.title %> by <%= @book.author %></h2>
       <p>Date added: <%= @book.created_at.strftime("%d/%m/%Y") %></p>
-      <div class="rating_position">
-        <h3 style="font-size: 20px">Rating: <%= @book.rating %>/10</h3>
+      <div class="rating_show">
+        <h3>Rating: <%= @book.rating %>/10</h3>
       </div>
     </div>
   </div>

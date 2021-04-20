@@ -13,8 +13,11 @@ a:hover {
 
 
 @media screen and (max-width: 1200px) {
+  .header .show_title {
+    max-width: 34em;
+  }
   .card .book_picture img {
-    width: 464px;
+    width: 19em;
   }
   .container {
       max-width: 1030px;
@@ -26,6 +29,9 @@ a:hover {
 }
 
 @media screen and (max-width: 900px) {
+  .header .show_title {
+    max-width: 20em;
+  }
   .card .book_picture img {
     width: 228px;
   }
@@ -36,12 +42,35 @@ a:hover {
 }
 
 @media screen and (max-width: 630px) {
+  .header .show_title {
+    max-width: 10em;
+    h2 {
+      font-size: 1.6em;
+    }
+  }
+  .header .book_photo img {
+    height: 195px;
+    width: 125px;
+  }
+  .show_card {
+    padding: 16px;
+  }
+  .content {
+    h3 {
+      font-size: 1.1em;
+    }
+    .padding_left {
+      padding-left: 0.5em;
+    }
+  }
   .card .book_picture img {
     width: 0px;
   }
-
   .book_title {
     padding-bottom: 16px;
+  }
+  .rating_show h3{
+    font-size: 1.1em;
   }
   .rating_position {
     margin-top: 16px;
