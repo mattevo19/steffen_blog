@@ -1,16 +1,16 @@
 <div class="container show_card">
-  <div class="book_photo">
-    <% if (@book.photo.attached?) %>
-      <%= cl_image_tag @book.photo.key, height: 100, width: 100, crop: :fill %>
-    <% end %>
-  </div>
   <div class="header">
+    <div class="book_photo">
+      <% if (@book.photo.attached?) %>
+        <%= cl_image_tag @book.photo.key, height: 390, width: 250 %>
+      <% end %>
+    </div>
     <div class="show_title">
       <h2 style="font-variant: small-caps;"><%= @book.title %> by <%= @book.author %></h2>
       <p>Date added: <%= @book.created_at.strftime("%d/%m/%Y") %></p>
-    </div>
-    <div class="rating_position">
-      <h3 style="font-size: 20px">Rating: <%= @book.rating %>/10</h3>
+      <div class="rating_position">
+        <h3 style="font-size: 20px">Rating: <%= @book.rating %>/10</h3>
+      </div>
     </div>
   </div>
   <div class="content">
