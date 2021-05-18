@@ -21,12 +21,12 @@
             </div>
           </div>
         </div>
-        <div>
+        
           <% if user_signed_in? %>
             <%= link_to  "edit", edit_book_path(book), class: "btn btn-secondary", style: "width: 100px" %>
             <%= link_to "Delete", book_path(book), method: :delete, data: { confirm: "Are you sure?"}, class: "btn btn-danger", style: "width: 100px" %>
           <% end %>
-        </div>
+        
       </div>
     <% end %>
   <% end %>
