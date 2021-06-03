@@ -10,7 +10,7 @@
     </div>
   </div>
 
-  <% @books.each do |book| %>
+  <% @asc.each do |book| %>
     <%= link_to book_path(book), :action => 'go' do %>
       <div class="margin_bottom">
         <div class="card">
@@ -40,5 +40,3 @@
     <% end %>
   <% end %>
 </div>
-
-

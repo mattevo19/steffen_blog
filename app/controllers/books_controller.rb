@@ -4,6 +4,15 @@ class BooksController < ApplicationController
 
   def index
     @books = Book.all
+    
+  end
+
+  def asc
+    @asc = Book.all.sort_by(&:created_at)
+  end
+
+  def des
+    @des = Book.all.sort_by(&:created_at).reverse
   end
 
   def show
@@ -47,6 +56,11 @@ class BooksController < ApplicationController
       redirect_to books_url
     end
   end
+
+  def sort_asc
+    @book.all.sort_by(&:created_at)
+  end
+  
   
   private
 

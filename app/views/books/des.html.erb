@@ -1,6 +1,6 @@
 <div class="container">
 
- <div class="left">
+  <div class="left">
     <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       Sort
     </button>
@@ -9,8 +9,8 @@
       <%= link_to "Oldest", des_path, class: "dropdown-item" %>
     </div>
   </div>
-
-  <% @books.each do |book| %>
+  
+  <% @des.each do |book| %>
     <%= link_to book_path(book), :action => 'go' do %>
       <div class="margin_bottom">
         <div class="card">
@@ -40,5 +40,3 @@
     <% end %>
   <% end %>
 </div>
-
-

@@ -11,6 +11,12 @@ a:hover {
   color: black;
 }
 
+.left {
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 16px;
+}
+
 
 @media screen and (max-width: 1200px) {
   .header .show_title {
